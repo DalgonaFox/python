@@ -50,4 +50,16 @@ print(Senai)
 nome = input('Nome: ').strip('na')
 print(nome)
 
+import time
+time.sleep(1)
+
+for i in range(1, 10):
+    print('*')
+
+for i in range(1, 10):
+    print(i)
+
+for i in range(10, 1, -1):
+    print(i)
+
 '''
