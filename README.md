@@ -1,4 +1,4 @@
-# python
+# Python
 Esse repositório contém todos os exercícios desenvolvidos por mim durante o curso "Fundamentos do Python 1"! Pretendo colocar qualquer outra coisa que eu desenvolver em Python posteriormente nesse repositório também.
 
 Existem duas pastas principais:
