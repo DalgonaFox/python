@@ -26,8 +26,7 @@ idade_2 = int(input(f'Digite a outra idade: '))
 
 soma_idades = idade_1 + idade_2
 print(f'A soma das idades é igual a {soma_idades}')
-'''
-'''
+
 #Strings
 Senai = 'Luis Eulálio'
 #Fatiamento
@@ -62,4 +61,19 @@ for i in range(1, 10):
 for i in range(10, 1, -1):
     print(i)
 
+
+
+#While
+
+while contador < 5:
+    print('Oi')
+    contador += 1
 '''
+
+contador = 0
+resposta = 'S'
+
+while resposta != 'N':
+    print(f'O contador é {contador}')
+    resposta = input('Deseja continuar? ').strip().upper()[0]
+    contador += 1
