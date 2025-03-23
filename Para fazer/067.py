@@ -1,0 +1,1 @@
+# Escreva um programa que crie um dicionário com as informações de 5 países, como nome, capital, população e idioma oficial. Em seguida, permita que o usuário digite o nome de um país e exiba suas informações.
