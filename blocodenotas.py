@@ -159,7 +159,7 @@ for c in range(0, 3):
    Aluno.append(dados[:]) #Inserção da cópia na LP
    dados.clear()
 
-print(Aluno)
+print([p[0] for p in Aluno if p[1] == 6])
 
 # Dicionários
 

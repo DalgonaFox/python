@@ -1,1 +1,0 @@
-# Escreva um programa que crie um dicionário com as informações de 5 livros, como título, autor, ano de lançamento e número de páginas. Em seguida, exiba apenas os autores dos livros.
