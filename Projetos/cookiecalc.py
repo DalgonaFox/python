@@ -12,7 +12,7 @@ Ingredientes:
 1 colher (chá) de essência de baunilha 13g
 '''
 
-recipe = {
+receita = {
     "manteiga": 125,
     "acucar": 150,
     "mascavo": 100,
@@ -23,7 +23,7 @@ recipe = {
     "baunilha": 4
 }
 
-stock = {
+estoque = {
     "manteiga": 500,
     "acucar": 1000,
     "mascavo": 1000,
@@ -34,7 +34,7 @@ stock = {
     "baunilha": 30
 }
 
-prices = {
+precos = {
     "manteiga": 7,
     "acucar": 4,
     "mascavo": 20,
@@ -45,21 +45,18 @@ prices = {
     "baunilha": 4
 }
 
-cost_per_batch = sum((recipe[i] * prices[i]) / stock[i] for i in recipe)
+custo_fornada = sum((receita[i] * precos[i]) / estoque[i] for i in receita)
+max_fornadas = min(estoque[i] // receita[i] for i in receita)
+custo_total = sum(precos[i] for i in precos)
+preco_final = max_fornadas * custo_fornada
 
-max_batches = min(stock[i] // recipe[i] for i in recipe)
-
-total_cost = sum(prices[i] for i in prices)
-
-final_price = max_batches * cost_per_batch
-
-print(f'Preço por fornada de cookie: R${round(cost_per_batch, 2)}')
-print(f'Preço por unidade de cookie: R${round(cost_per_batch / 10, 2)}')
-print(f'Quantas fornadas de cookie dá pra fazer? {max_batches}')
-print(f'Gasto inicial: {total_cost}')
-print(f'Custo final das fornadas: {final_price}')
-print(f'Montante final se o cookie for R$4: {4 * 10 * max_batches}')
-print(f'Lucro (gasto inicial): {(4 * 10 * max_batches) - total_cost}')
-print(f'Lucro (gasto fornadas (sem sobras)): {(4 * 10 * max_batches) - final_price}')
-print(f'Lucro (por fornada): {(4 * 10) - cost_per_batch}')
+print(f'Preço por fornada de cookie: R${round(custo_fornada, 2)}')
+print(f'Preço por unidade de cookie: R${round(custo_fornada / 12, 2)}')
+print(f'Quantas fornadas de cookie dá pra fazer? {max_fornadas}')
+print(f'Gasto inicial: {custo_total}')
+print(f'Custo final das fornadas: {preco_final}')
+print(f'Montante final se o cookie for R$4: {5 * 10 * max_fornadas}')
+print(f'Lucro (gasto inicial): {(5 * 12 * max_fornadas) - custo_total}')
+print(f'Lucro (gasto fornadas (sem sobras)): {(5 * 12 * max_fornadas) - preco_final}')
+print(f'Lucro (por fornada): {(5 * 12) - custo_fornada}')
 
